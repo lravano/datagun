@@ -69,6 +69,8 @@ class DatagunClient{
 
         $bodyJSON = json_encode($body);
         
+
+
         $headers = ['Content-Type' => 'application/json' ];
         
         $request = new Request('POST', '/api/v1/data/json', $headers, $bodyJSON);
