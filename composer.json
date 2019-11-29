@@ -1,0 +1,32 @@
+{
+    "name": "made/datagun",
+    "description": "This package is a wrapper for Datagun REST API",
+    "authors": [
+        {
+            "name": "Lorenzo Ravano",
+            "email": "lravano@mademarketing.it"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "~6.0"        
+    },
+    "autoload": {
+        "psr-4": {
+            "Made\\Datagun\\": "src/",
+            "GuzzleHttp\\": "vendor/guzzlehttp"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Made\\Datagun\\DatagunServiceProvider"
+            ],
+            "aliases": {
+                "Datagun": "Made\\Datagun\\Facade"
+            }
+        }
+    }   
+
+}
